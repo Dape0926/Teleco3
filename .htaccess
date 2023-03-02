@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.servicios.com  [NC]	
+RewriteRule ^(.*)$ http://www.nuevoservicios.com/$1 [R=301,NC]
+
