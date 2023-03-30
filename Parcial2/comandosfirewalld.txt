@@ -1,0 +1,9 @@
+firewall-cmd --zone=dmz --add-forward-port=port=990:proto=tcp:toaddr=192.168.100.4:toport=990 --permanent
+firewall-cmd --zone=dmz --add-port=40000-50000/'tcp' --permanent
+firewall-cmd --zone=dmz --add-forward-port=port=21:proto=tcp:toaddr=192.168.100.4:toport=21 --permanent
+firewall-cmd --zone=dmz --add-port=21/tcp --permanent
+sudo firewall-cmd --set-default-zone=dmz
+
+firewall-cmd --permanent --zone=dmz --add-rich-rule='rule family="ipv4" port port="80" protocol="tcp" drop'
+firewall-cmd --zone=dmz --add-service=http --permanent
+sudo firewall-cmd --reload
