@@ -1,4 +1,4 @@
-Esta es una guía de implementación de un clúster Galera de bases de datos MariaDB con balanceo de carga usando Nginx.
+Esta es una guía de implementación de un clúster Galera de bases de datos MariaDB con balanceo de carga usando NGINX.
 
 Esta guia esta diseñada tanto para poder implementarla solo leyendo este readme, o usando los archivos de configuracion ya modificados 
 que estan en el repositorio, sientete libre de implementarlo como te parezca mas sencillo.
