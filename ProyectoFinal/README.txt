@@ -241,7 +241,7 @@ Te debe aparecer algo parecido a esto.
 | wsrep_cluster_size | 1     |
 +--------------------+-------+
 
-En caso de que no te salga asi repite el paso 7.
+En caso de que no te salga asi repite el paso 8.
 
 Ahora dirigete al segundo nodo y inicia el servicio de MariaDB. 
 
@@ -376,17 +376,17 @@ Nos dirigimos al nodo 1 y entramos a la consola de MariaDB con
 
 En la consola usamos el siguiente comando para la creación de dicho usuario
 
-- GRANT ALL PRIVILEGES ON . TO 'usuario1'@'%' IDENTIFIED BY 'usuario1'; // Puede cambiar 'usuario1' por el nombre que le quiera dar
+- GRANT ALL PRIVILEGES ON . TO 'usuario'@'%' IDENTIFIED BY 'contraseña'; // Puede cambiar 'usurario' por el nombre que le quiera dar
 
 Para actualizar los permisos se usa el siguiente comando
 
-- flush privileges;
+- FLUSH PRIVILEGES;
 
 Luego de esto podemos salir de la consola del nodo 1 y volver a nuestro cliente sql
 
 14. Entramos a nuestro cluster de base de datos realizando la solicitud al balanceador directamente
 
-- mysql -h 192.168.70.8 -u usuario1 -p //PARA ENTRAR A LA BASE DE DATOS DESDE EL BALANCEADOR
+- mysql -h 192.168.70.8 -u usuario -p //PARA ENTRAR A LA BASE DE DATOS DESDE EL BALANCEADOR
 
 Te pedira la contraseña del usuario y estaras dentro de la consola de comandos de la base de datos, puedes hacer una prueba intentando crear una base de datos como se hizo en pasos anteriores y despues de esto corroborar directamente en todos los nodos que se creo la base de datos.
 
