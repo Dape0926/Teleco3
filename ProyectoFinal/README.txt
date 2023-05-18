@@ -376,7 +376,7 @@ Nos dirigimos al nodo 1 y entramos a la consola de MariaDB con
 
 En la consola usamos el siguiente comando para la creación de dicho usuario
 
-- GRANT ALL PRIVILEGES ON . TO 'usuario'@'%' IDENTIFIED BY 'contraseña'; // Puede cambiar 'usurario' por el nombre que le quiera dar
+- GRANT ALL PRIVILEGES ON *.* TO 'usuario'@'%' IDENTIFIED BY 'contraseña'; // Puede cambiar 'usurario' por el nombre que le quiera dar
 
 Para actualizar los permisos se usa el siguiente comando
 
